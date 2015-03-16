@@ -1,0 +1,83 @@
+honey_orange = #FABA64
+color_xlight = #f3f3f3
+color_light  = #e3e3e3
+color_med    = #c3c3c3
+color_dark   = #a4a4a4
+
+button:focus
+  outline none
+  
+*:focus
+  border 1px solid red
+
+clickable()
+  cursor pointer
+
+.container.main
+  background #F7F7F7
+  height 100%
+  width 340px
+  font-family 'avenir'
+  position absolute
+
+.ext-navbar
+  text-align center
+  padding 16px
+  .notifs
+    clickable()
+    float left
+  .close 
+    clickable()
+    float right
+  .logo img
+      clickable()
+      height 25px
+  .nav-btn
+    font-size 10px
+    width 20px
+    height 20px
+    padding 4px 1px 0 0
+    box-sizing border-box
+    border-radius 14px
+    i.ss-icon 
+      color honey_orange
+    &:hover
+      background honey_orange
+      i.ss-icon
+        color white
+              
+.list-item
+  clickable()
+  height 70px
+  padding 12px
+  background white
+  border-top 1px solid color_light
+  border-bottom 1px solid color_light
+  &:hover  
+    background honey_orange
+  .image
+    float left
+    img 
+      height 100%
+      border 1px solid color_light
+      padding 4px
+      margin 0 12px
+      box-sizing border-box
+  .title p
+    margin 0
+    margin-top 12px
+    height 24px
+    overflow hidden
+  .price
+    font-size 0.8em
+    font-weight bolder
+    .verified
+      font-weight bolder
+      font-size 8px
+      width 0
+      color white
+      padding 4px 4px 1px 5px
+      background honey_orange
+      border-radius 11px
+      position relative
+    
