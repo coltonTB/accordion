@@ -16,7 +16,11 @@ clickable()
   font-family 'avenir'
   position absolute
   box-sizing border-box
-
+  .content
+    padding 20px 30px
+    max-height 100%
+    overflow-y scroll
+    
 .icon
   border: 1px solid gray
   width: 20px
@@ -129,7 +133,6 @@ clickable()
 // view-all button for coupons and sales
 .view-all
   clickable()
-  margin-top: 50px
   text-align: center
   background: honey_orange
   border-radius: 3px

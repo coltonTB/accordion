@@ -10,7 +10,11 @@
   "license": "ISC",
   "dependencies": {
     "gulp": "^3.8.11",
+    "gulp-concat": "^2.5.2",
+    "gulp-declare": "^0.3.0",
+    "gulp-handlebars": "^4.0.0",
     "gulp-rename": "^1.2.0",
-    "gulp-stylus": "^2.0.1"
+    "gulp-stylus": "^2.0.1",
+    "gulp-wrap": "^0.11.0"
   }
 }

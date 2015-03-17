@@ -29,6 +29,11 @@ button:focus {
   position: absolute;
   box-sizing: border-box;
 }
+.container .content {
+  padding: 20px 30px;
+  max-height: 100%;
+  overflow-y: scroll;
+}
 .icon {
   border: 1px solid #808080;
   width: 20px;
@@ -156,7 +161,6 @@ button:focus {
 }
 .view-all {
   cursor: pointer;
-  margin-top: 50px;
   text-align: center;
   background: #faba64;
   border-radius: 3px;
@@ -311,9 +315,7 @@ button:focus {
 }
 .container.coupons {
   background: #f3f3f3;
-  padding: 20px 30px;
   line-height: 20px;
-  height: auto;
 }
 .container.coupons .posted-by {
   font-size: 11pt;
@@ -355,9 +357,7 @@ button:focus {
 }
 .container.sales {
   background: #f3f3f3;
-  padding: 20px 30px;
   line-height: 20px;
-  height: auto;
 }
 .panels {
   padding: 50px;

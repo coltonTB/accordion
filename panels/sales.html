@@ -6,103 +6,16 @@
 </head>
 <body>
 
-  <div class="container sales">
+  <div id="main"></div>
 
-    <div class="header">
-      <span class="title">
-        sales
-      </span>
-      <span class="number">
-        34
-      </span>
-    </div>
-
-    <div class="content">
-
-      <div class="list-item deal">      
-        <div class="icon">
-          <i class="ss-icon">&#x21AA;</i>
-        </div>
-        <div class="content">
-          <div class="description">
-            Select Adidas Men's Originals SL Loop Runner Sneakers starting at $59.98
-          </div>
-        </div>
-      </div>
-
-      <div class="list-item deal">      
-        <div class="icon">
-          <i class="ss-icon">&#x21AA;</i>
-        </div>
-        <div class="content">
-          <div class="description">
-            50% off First Impressions Tops and Bottoms
-          </div>
-        </div>
-      </div>
-
-      <div class="list-item deal">      
-        <div class="icon">
-          <i class="ss-icon">&#x21AA;</i>
-        </div>
-        <div class="content">
-          <div class="description">
-            This is an test for extremely long descriptions to make sure that they fit inside the design, This is an test for extremely long descriptions to make sure that they fit inside the design
-          </div>
-        </div>
-      </div>
-
-      <div class="list-item deal">      
-        <div class="icon">
-          <i class="ss-icon">&#x21AA;</i>
-        </div>
-        <div class="content">
-          <div class="description">
-            Select Adidas Men's Originals SL Loop Runner Sneakers starting at $59.98
-          </div>
-        </div>
-      </div>
-
-      <div class="list-item deal">      
-        <div class="icon">
-          <i class="ss-icon">&#x21AA;</i>
-        </div>
-        <div class="content">
-          <div class="description">
-            50% off First Impressions Tops and Bottoms
-          </div>
-        </div>
-      </div>
-
-      <div class="list-item deal">      
-        <div class="icon">
-          <i class="ss-icon">&#x21AA;</i>
-        </div>
-        <div class="content">
-          <div class="description">
-            Select Adidas Men's Originals SL Loop Runner Sneakers starting at $59.98
-          </div>
-        </div>
-      </div>
-
-      <div class="list-item deal">      
-        <div class="icon">
-          <i class="ss-icon">&#x21AA;</i>
-        </div>
-        <div class="content">
-          <div class="description">
-            50% off First Impressions Tops and Bottoms
-          </div>
-        </div>
-      </div>
-      
-    </div>
-
-    <div class="view-all">
-      view all
-    </div>
-
-  </div>
-
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.js"></script>
+  <script type="text/javascript" src="../templates.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      var template = Handlebars.compile("{{> sales }}")
+      $('#main').html(template());
+    });
+  </script>
 </body>
 </html>

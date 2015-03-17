@@ -5,108 +5,18 @@
   <link rel="stylesheet" type="text/css" href="http://46362e6d99dc8ccd2ae0-fbb611151208cbfcf9ccc8876a5d1e85.r17.cf1.rackcdn.com/ss-standard.css">
 </head>
 <body>
-  <div class="container main">
 
-    <div class="ext-navbar">
-      <a class="nav-btn notifs">
-        <i class="ss-icon">&#x1F514;</i>
-      </a>
-      <span class="logo">
-        <img src="../assets/logo_70.png"/>
-      </span>
-      <a class="nav-btn close">
-        <i class="ss-icon">&#x2421;</i>
-      </a>
-    </div>
+  <div id="main"></div>
 
-    <div class="list-item product">
-      <span class="image">
-        <img src="http://c426931.r31.cf0.rackcdn.com/110RLB9903.jpg"/>
-      </span>
-      <span class="title">
-        <p>Rollerblade Swindler Skates that are fun to skate on</p>
-      </span>
-      <span class="price">
-        <span class="value">
-          $113.00
-        </span>
-        <span class="verified">
-          <i class="ss-icon">&#x2713;</i>
-        </span>
-      </span>
-    </div>
-
-    <div class="tabs">
-      <div class="tab active">
-        <div class="tab-handle">
-          <span class="badge">5%</span>
-          <span class="title">instant cash available</span>
-          <span class="icon">
-            <i class="ss-icon">&#x27A1;</i>
-          </span>
-        </div>
-        <div class="tab-content instant-cash-zone">
-          <div class="percentage">
-            5%
-          </div>
-          <div class="ic-prompt">
-            instant cash
-          </div>
-          <button class="activate">
-            ACTIVATE
-          </button>
-          <div class="expires">
-            EXPIRES IN 3 HOURS
-          </div>
-        </div>
-      </div>
-      <div class="tab">
-        <div class="tab-handle">
-          <span class="badge">3</span>
-          <span class="title">coupons</span>
-          <span class="icon">
-            <i class="ss-icon">&#x27A1;</i>
-          </span>
-        </div>
-        <div class="tab-content">
-          <iframe src="./coupons.html"></iframe>
-        </div>
-      </div>
-
-      <div class="tab">
-        <div class="tab-handle">
-          <span class="badge">23</span>
-          <span class="title">sales</span>
-          <span class="icon">
-            <i class="ss-icon">&#x27A1;</i>
-          </span>
-        </div>
-        <div class="tab-content">
-          <iframe src="./sales.html"></iframe>
-        </div>
-      </div>
-
-      <div class="tab">
-        <div class="tab-handle">
-          <span class="badge">
-            <img src="http://www.american.edu/uploads/profiles/large/chris_palmer_profile_11.jpg"/>
-          </span>
-          <span class="title">millybee</span>
-          <span class="icon">
-            <i class="ss-icon">&#x27A1;</i>
-          </span>
-        </div>
-        <div class="tab-content">
-          This is your profile
-        </div>
-      </div>
-    </div>
-
-  </div>
-
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.js"></script>
+  <script type="text/javascript" src="../templates.js"></script>
   <script type="text/javascript">
     $(function(){
+      
+      var template = Handlebars.compile("{{> main }}")
+      $('#main').html(template());
+
       $('.tabs .tab').on('click', function(e){
         $('.tab').removeClass('active');
         $(e.target).closest('.tab').addClass('active');

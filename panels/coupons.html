@@ -6,95 +6,19 @@
 </head>
 <body>
 
-  <div class="container coupons">
+  <div id="main"></div>
 
-    <div class="header">
-      <span class="title">
-        coupons
-      </span>
-      <span class="number">
-        28
-      </span>
-    </div>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.js"></script>
+  <script type="text/javascript" src="../templates.js"></script>
+  <script type="text/javascript">
 
-    <div class="content">
+    $(function(){
+      var template = Handlebars.compile("{{> coupons }}")
+      $('#main').html(template());
+    });
 
-      <span class="posted-by">Posted by <strong>Honey</strong></span>
-
-      <div class="honey-coupon">
-        <div class="list-item deal">      
-          <div class="icon">
-            <i class="ss-icon">&#x2B07;</i>
-          </div>
-          <div class="content">
-            <div class="code">COD34U</div>
-            <div class="description">
-              Extra 25% Off $100 On Sale & Clearance Items Free Shipping
-            </div>
-            <div class="expiration">
-              exp: 3/1/2015
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="honey-coupon">
-        <div class="list-item deal">      
-          <div class="icon">
-            <i class="ss-icon">&#x2B07;</i>
-          </div>
-          <div class="content">
-            <div class="code">COD34U</div>
-            <div class="description">
-              Extra 25% Off $100 On Sale & Clearance Items Free Shipping
-            </div>
-            <div class="expiration">
-              exp: 3/1/2015
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <span class="posted-by">Posted by <strong>dandeman</strong></span>
-
-      <div class="quest-coupon">
-        <div class="list-item deal">
-          <div class="icon">
-            <i class="ss-icon">&#x2B07;</i>
-          </div>
-          <div class="content">
-            <div class="description">
-              15% off with <span class="code">COD34U</span>
-            </div>
-          </div>
-        </div>
-        <div class="details">details</div>
-      </div>
-
-
-      <span class="posted-by">Posted by <strong>denmark</strong></span>
-
-      <div class="quest-coupon">
-        <div class="list-item deal">
-          <div class="icon">
-            <i class="ss-icon">&#x2B07;</i>
-          </div>
-          <div class="content">
-            <div class="description">
-              15% off with <span class="code">COD34U</span>
-            </div>
-          </div>
-        </div>
-        <div class="details">details</div>
-      </div>
-
-    </div>
-
-    <div class="view-all">
-      view all
-    </div>
-
-  </div>
+  </script>
 
 </body>
 </html>
