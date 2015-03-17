@@ -224,6 +224,7 @@ button:focus {
   transition-timing-function: ease-in, ease-out;
 }
 .tab .tab-content {
+  text-align: center;
   background: #fff;
   height: 0;
   transition-property: height;
