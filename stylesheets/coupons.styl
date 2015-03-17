@@ -2,13 +2,16 @@
   background color_xlight
   padding 20px 30px
   line-height 20px
+  height auto
+  
   .header
     color honey_orange
     font-size 18pt
     line-height 20px
     margin-bottom 20px
-  .number
-    float right
+    .number
+      float right
+    
   .view-all
     clickable()
     margin-top: 50px
@@ -29,18 +32,33 @@
     strong
       color black
       font-weight bold
-      
-.honey-coupon:hover, .quest-coupon:hover
-  .list-item 
-    .code 
-      color white
-    .icon
-      color white
-      border-color honey_orange
-      i
-        color white
-    
+          
 .honey-coupon, .quest-coupon
+  .list-item
+    margin-top 10px
+    border-radius 5px
+    border 1px solid color_dark
+    font-size 15px
+    height auto
+    &:hover
+      .code, .icon, .icon i 
+        color white
+        border-color honey_orange
+    .code
+      color orange
+      margin-left 30px
+    .description, .expiration
+      margin-left 30px
+      color gray
+      font-size 0.9em
+      padding-top 2px
+    .icon
+      float left
+    
+.quest-coupon
+  .list-item
+    .code
+      margin-left 6px
   .details
     clickable()
     float right
@@ -58,25 +76,8 @@
       padding-bottom: 1px
       line-height: 12px
       display: inline-block
-  .list-item
-    margin-top 10px
-    border-radius 5px
-    border 1px solid color_dark
-    font-size 15px
-    height auto
-    .code
-      color orange
-      margin-left 30px
-    .description, .expiration
-      margin-left 30px
+    &:hover
       color gray
-      font-size 0.9em
-      padding-top 2px
-    .icon
-      float left
-    
-.quest-coupon
-  .list-item
-    .code
-      margin-left 6px
+      &:after
+        background gray
       

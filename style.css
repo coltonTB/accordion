@@ -267,6 +267,7 @@ button:focus {
   background: #f3f3f3;
   padding: 20px 30px;
   line-height: 20px;
+  height: auto;
 }
 .container.coupons .header {
   color: #faba64;
@@ -274,7 +275,7 @@ button:focus {
   line-height: 20px;
   margin-bottom: 20px;
 }
-.container.coupons .number {
+.container.coupons .header .number {
   float: right;
 }
 .container.coupons .view-all {
@@ -300,40 +301,6 @@ button:focus {
   color: #000;
   font-weight: bold;
 }
-.honey-coupon:hover .list-item .code,
-.quest-coupon:hover .list-item .code {
-  color: #fff;
-}
-.honey-coupon:hover .list-item .icon,
-.quest-coupon:hover .list-item .icon {
-  color: #fff;
-  border-color: #faba64;
-}
-.honey-coupon:hover .list-item .icon i,
-.quest-coupon:hover .list-item .icon i {
-  color: #fff;
-}
-.honey-coupon .details,
-.quest-coupon .details {
-  cursor: pointer;
-  float: right;
-  font-size: 12px;
-  color: #ffa500;
-}
-.honey-coupon .details:after,
-.quest-coupon .details:after {
-  content: '+';
-  background: #ffa500;
-  color: #fff;
-  width: 10px;
-  height: 10px;
-  border-radius: 24px;
-  margin-left: 5px;
-  padding-left: 1px;
-  padding-bottom: 1px;
-  line-height: 12px;
-  display: inline-block;
-}
 .honey-coupon .list-item,
 .quest-coupon .list-item {
   margin-top: 10px;
@@ -341,6 +308,15 @@ button:focus {
   border: 1px solid #a4a4a4;
   font-size: 15px;
   height: auto;
+}
+.honey-coupon .list-item:hover .code,
+.quest-coupon .list-item:hover .code,
+.honey-coupon .list-item:hover .icon,
+.quest-coupon .list-item:hover .icon,
+.honey-coupon .list-item:hover .icon i,
+.quest-coupon .list-item:hover .icon i {
+  color: #fff;
+  border-color: #faba64;
 }
 .honey-coupon .list-item .code,
 .quest-coupon .list-item .code {
@@ -362,6 +338,31 @@ button:focus {
 }
 .quest-coupon .list-item .code {
   margin-left: 6px;
+}
+.quest-coupon .details {
+  cursor: pointer;
+  float: right;
+  font-size: 12px;
+  color: #ffa500;
+}
+.quest-coupon .details:after {
+  content: '+';
+  background: #ffa500;
+  color: #fff;
+  width: 10px;
+  height: 10px;
+  border-radius: 24px;
+  margin-left: 5px;
+  padding-left: 1px;
+  padding-bottom: 1px;
+  line-height: 12px;
+  display: inline-block;
+}
+.quest-coupon .details:hover {
+  color: #808080;
+}
+.quest-coupon .details:hover:after {
+  background: #808080;
 }
 .panels {
   padding: 50px;
