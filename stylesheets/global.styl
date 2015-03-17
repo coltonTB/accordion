@@ -7,9 +7,6 @@ color_dark   = #a4a4a4
 button:focus
   outline none
   
-*:focus
-  border 1px solid red
-
 clickable()
   cursor pointer
 
@@ -26,13 +23,14 @@ clickable()
   height: 20px
   border-radius: 15px
   text-align: center
-  font-size: 11px
+  font-size: 0.7em
   padding: 0px 1px 3px 2px
   box-sizing border-box
   line-height 21px
   i 
     color gray
 
+// navigation
 .ext-navbar
   background #F7F7F7
   text-align center
@@ -60,6 +58,7 @@ clickable()
       i.ss-icon
         color white
               
+// list item
 .list-item
   clickable()
   height 70px
@@ -69,6 +68,8 @@ clickable()
   border-bottom 1px solid color_light
   &:hover  
     background honey_orange
+    
+.list-item.product
   .image
     float left
     img 
@@ -94,4 +95,47 @@ clickable()
       background honey_orange
       border-radius 11px
       position relative
+
+.list-item.deal
+  margin-top 10px
+  border-radius 5px
+  border 1px solid color_dark
+  font-size 15px
+  height auto
+  &:hover
+    .code, .icon, .icon i 
+      color white
+      border-color honey_orange
+  .code
+    color orange
+    margin-left 30px
+  .description, .expiration
+    margin-left 30px
+    color gray
+    font-size 0.9em
+    padding-top 2px
+  .icon
+    float left
+    
+// header for coupons and sales
+.header
+  color honey_orange
+  font-size 18pt
+  line-height 20px
+  margin-bottom 20px
+  .number
+    float right
+  
+// view-all button for coupons and sales
+.view-all
+  clickable()
+  margin-top: 50px
+  text-align: center
+  background: honey_orange
+  border-radius: 3px
+  padding: 5px
+  color white
+  border 1px solid gray
+  &:hover
+    border-color orange
     
