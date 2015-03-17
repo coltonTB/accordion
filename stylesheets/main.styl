@@ -41,13 +41,13 @@
   .tab
     overflow hidden
     width 100%
+    border-top: 1px solid color_light
   .tab-handle
     clickable()
     box-sizing border-box
     height: 45px
     line-height: 27px
     padding: 0px 24px
-    border-top: 1px solid color_light
     background white    
     overflow hidden
     .badge
@@ -78,6 +78,9 @@
       margin-top 10px
       
 
+tdur = 0.3s
+
+.tab:not(.active)
   .tab-handle:hover
     background honey_orange
     .badge
@@ -90,32 +93,39 @@
       border-color honey_orange
       color white
       
-
-  .tab.inactive
+// transition declaration
+  .tab 
     height 45px
-    transition height, 1s, ease-out
+    transition height, tdur, ease-out
     .tab-handle
       opacity 1
-      transition opacity 1s
+      height 45px
+      transition-property opacity, height
+      transition-duration 0.1s, 0.3s
+      transition-delay 0.15s, 0s
+      transition-timing-function ease-in, ease-out
     .tab-content
+      background white
       height 0
-      opacity 0
-      transition-property all
-      transition-duration 1s
+      transition-property height
+      transition-duration tdur
       transition-timing-function ease-out
 
   .tab.active
-    height 500px
-    transition height, 1s, ease-out
+    height 100%
+    transition height, tdur, ease-out
     .tab-handle
-      background white
       opacity 0
-      transition opacity 1s
+      height 45px
+      transition-property opacity, height
+      transition-duration 0.1s, 0.2s
+      transition-delay 0s, 0s
+      transition-timing-function ease-out, ease-out
     .tab-content
       opacity 1
-      height 500px
+      height 100%
       transition-property all
-      transition-duration 1s
+      transition-duration tdur
       transition-timing-function ease-out
 
       

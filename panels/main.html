@@ -60,7 +60,7 @@
           </div>
         </div>
       </div>
-      <div class="tab inactive">
+      <div class="tab">
         <div class="tab-handle">
           <span class="badge">3</span>
           <span class="title">coupons</span>
@@ -73,7 +73,7 @@
         </div>
       </div>
 
-      <div class="tab inactive">
+      <div class="tab">
         <div class="tab-handle">
           <span class="badge">23</span>
           <span class="title">sales</span>
@@ -86,7 +86,7 @@
         </div>
       </div>
 
-      <div class="tab inactive">
+      <div class="tab">
         <div class="tab-handle">
           <span class="badge">
             <img src="http://www.american.edu/uploads/profiles/large/chris_palmer_profile_11.jpg"/>
@@ -109,8 +109,6 @@
     $(function(){
       $('.tabs .tab').on('click', function(e){
         $('.tab').removeClass('active');
-        $('.tab').addClass('inactive');
-        $(e.target).closest('.tab').removeClass('inactive');
         $(e.target).closest('.tab').addClass('active');
       });
     });

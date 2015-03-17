@@ -26,13 +26,13 @@ button:focus {
   border: 1px solid #f00;
 }
 .container.main {
-  background: #f7f7f7;
   height: 100%;
   width: 340px;
   font-family: 'avenir';
   position: absolute;
 }
 .ext-navbar {
+  background: #f7f7f7;
   text-align: center;
   padding: 16px;
 }
@@ -155,6 +155,7 @@ button:focus {
 .tabs .tab {
   overflow: hidden;
   width: 100%;
+  border-top: 1px solid #e3e3e3;
 }
 .tabs .tab-handle {
   cursor: pointer;
@@ -162,7 +163,6 @@ button:focus {
   height: 45px;
   line-height: 27px;
   padding: 0px 24px;
-  border-top: 1px solid #e3e3e3;
   background: #fff;
   overflow: hidden;
 }
@@ -196,50 +196,57 @@ button:focus {
   padding: 0px 1px 3px 2px;
   margin-top: 10px;
 }
-.tabs .tab-handle:hover {
+.tab:not(.active) .tab-handle:hover {
   background: #faba64;
 }
-.tabs .tab-handle:hover .badge {
+.tab:not(.active) .tab-handle:hover .badge {
   border-color: #fff;
   background-color: #fff;
   color: #faba64;
 }
-.tabs .tab-handle:hover .title {
+.tab:not(.active) .tab-handle:hover .title {
   color: #fff;
 }
-.tabs .tab-handle:hover .icon {
+.tab:not(.active) .tab-handle:hover .icon {
   border-color: #faba64;
   color: #fff;
 }
-.tabs .tab.inactive {
+.tab {
   height: 45px;
-  transition: height, 1s, ease-out;
+  transition: height, 0.3s, ease-out;
 }
-.tabs .tab.inactive .tab-handle {
+.tab .tab-handle {
   opacity: 1;
-  transition: opacity 1s;
+  height: 45px;
+  transition-property: opacity, height;
+  transition-duration: 0.1s, 0.3s;
+  transition-delay: 0.15s, 0s;
+  transition-timing-function: ease-in, ease-out;
 }
-.tabs .tab.inactive .tab-content {
+.tab .tab-content {
+  background: #fff;
   height: 0;
-  opacity: 0;
-  transition-property: all;
-  transition-duration: 1s;
+  transition-property: height;
+  transition-duration: 0.3s;
   transition-timing-function: ease-out;
 }
-.tabs .tab.active {
-  height: 500px;
-  transition: height, 1s, ease-out;
+.tab.active {
+  height: 100%;
+  transition: height, 0.3s, ease-out;
 }
-.tabs .tab.active .tab-handle {
-  background: #fff;
+.tab.active .tab-handle {
   opacity: 0;
-  transition: opacity 1s;
+  height: 45px;
+  transition-property: opacity, height;
+  transition-duration: 0.1s, 0.2s;
+  transition-delay: 0s, 0s;
+  transition-timing-function: ease-out, ease-out;
 }
-.tabs .tab.active .tab-content {
+.tab.active .tab-content {
   opacity: 1;
-  height: 500px;
+  height: 100%;
   transition-property: all;
-  transition-duration: 1s;
+  transition-duration: 0.3s;
   transition-timing-function: ease-out;
 }
 .panels {
