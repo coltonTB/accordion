@@ -30,6 +30,7 @@ button:focus {
   box-sizing: border-box;
 }
 .container .content {
+  position: relative;
   padding: 20px 30px;
   max-height: 100%;
   overflow-y: scroll;
@@ -345,6 +346,53 @@ button:focus {
 .container.sales {
   background: #f3f3f3;
   line-height: 20px;
+}
+.container.profile {
+  background: #f3f3f3;
+  line-height: 20px;
+  box-sizing: border-box;
+}
+.container.profile .content {
+  height: 530px;
+  padding-top: 180px;
+}
+.container.profile a {
+  color: #ffa500;
+  text-decoration: none;
+}
+.container.profile .form input {
+  display: block;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+.container.profile .form button {
+  cursor: pointer;
+  width: 100%;
+  height: 30px;
+  background: #faba64;
+  border: none;
+  color: #fff;
+}
+.container.profile .form .or {
+  text-align: center;
+  padding: 15px 0;
+}
+.container.profile .form a {
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+}
+.container.profile .profile-footer {
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 25px;
+  border-top: 1px solid #e3e3e3;
+}
+.container.profile .profile-footer a {
+  margin: 0 6px;
 }
 .panels {
   padding: 50px;

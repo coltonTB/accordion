@@ -1,0 +1,21 @@
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <link rel="stylesheet" type="text/css" href="http://46362e6d99dc8ccd2ae0-fbb611151208cbfcf9ccc8876a5d1e85.r17.cf1.rackcdn.com/ss-standard.css">
+</head>
+<body>
+
+  <div id="main"></div>
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.0/handlebars.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.js"></script>
+  <script type="text/javascript" src="../templates.js"></script>
+  <script type="text/javascript">
+    $(function(){
+      var template = Handlebars.compile("{{> profile }}")
+      $('#main').html(template());
+    });
+  </script>
+</body>
+</html>
