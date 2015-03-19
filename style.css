@@ -99,6 +99,7 @@ a {
 }
 .list-item:hover {
   background: #f7c257;
+  color: #fff;
 }
 .list-item.product .image {
   float: left;
@@ -398,9 +399,10 @@ a {
   background: #fff;
   border: 1px solid #f29820;
   margin-top: 160px;
+  color: #f7c257;
 }
 .container.profile button.switch:hover {
-  background: #e6e6e6;
+  background: #fafafa;
 }
 .container.profile .form input {
   display: block;
