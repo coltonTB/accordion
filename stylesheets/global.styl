@@ -49,14 +49,41 @@ clickable()
   width: 20px
   height: 20px
   border-radius 15px
-  text-align: center
-  font-size: 0.7em
-  padding: 0px 1px 3px 2px
-  box-sizing border-box
-  line-height 21px
-  i 
-    color grey_dark
-    
+  background-size 85%
+  background-repeat no-repeat
+  background-position center
+  &:hover
+    border-color transparent
+  
+.icon.down-arrow
+  background-image url('http://storage.googleapis.com/honey-extension/images/assets/arrow_copy.png')
+  &:hover
+    background-image url('http://storage.googleapis.com/honey-extension/images/assets/arrow_copy_white.png')
+  
+.icon.right-arrow
+  transform rotate(-90deg)
+  background-image url('http://storage.googleapis.com/honey-extension/images/assets/arrow_copy.png')
+  &:hover
+    background-image url('http://storage.googleapis.com/honey-extension/images/assets/arrow_copy_white.png')
+  
+.icon.notifs-icon
+  background-image url('http://storage.googleapis.com/honey-extension/images/assets/bell.png')
+  &:hover
+    background-image url('http://storage.googleapis.com/honey-extension/images/assets/bell_highlighted.png')
+
+.icon.share-icon
+  background-image url('http://storage.googleapis.com/honey-extension/images/assets/arrow_link.png')
+  &:hover
+    background-image url('http://storage.googleapis.com/honey-extension/images/assets/arrow_link_white.png')
+
+.icon.close-icon
+  background-image url('http://storage.googleapis.com/honey-extension/images/assets/exe_yellow.png')
+  &:hover
+    background-image url('http://storage.googleapis.com/honey-extension/images/assets/exe_white_circle.png')
+
+.icon.check-icon
+  background-image url('http://storage.googleapis.com/honey-extension/images/assets/check.png')
+
 #notifs
   position: absolute;
   width: 305px;
@@ -79,10 +106,10 @@ clickable()
   background grey_bg
   text-align center
   padding 16px
-  .notifs
+  .notifs-icon
     clickable()
     float left
-  .close 
+  .close-icon
     clickable()
     float right
   .logo img
@@ -90,12 +117,8 @@ clickable()
     height 25px
   .icon
     border none
-    i.ss-icon 
-      color color_main
-    &:hover, &.selected
-      background color_main
-      i.ss-icon
-        color white
+    &.selected
+      @extend .icon.notifs-icon:hover
               
 // list item
 .list-item
@@ -108,6 +131,8 @@ clickable()
   &:hover  
     background color_main
     color white
+    .icon
+      border-color transparent
     
 .list-item.product
   .image
@@ -129,24 +154,22 @@ clickable()
   .price
     font-size 0.8em
     font-weight bolder
-    .verified
-      font-weight bolder
-      font-size 8px
-      width 0
-      color white
-      padding 4px 4px 1px 5px
-      background color_main
-      border-radius 11px
+    .icon.check-icon
+      display inline-block
+      border none
+      width 14px
+      height 14px
       position relative
+      top 2px
 
-.list-item.deal
+.list-item.sale, .list-item.coupon
   margin-top 10px
   border-radius 4px
   border 1px solid grey_circleline
   font-size 15px
   height auto
   &:hover
-    .code, .icon, .icon i 
+    .code
       color white
       border-color color_main
   .code
@@ -160,6 +183,15 @@ clickable()
   .icon
     float left
     
+.list-item.sale:hover
+  .icon
+    @extend .icon.share-icon:hover    
+    
+.list-item.coupon:hover
+  .icon
+    @extend .icon.down-arrow:hover    
+
+
 // header for coupons and sales
 .header
   color color_main

@@ -29,10 +29,8 @@
         text-align center
         display inline-block
         font-weight bold
-      &:hover
-        .number, .icon, .icon i
-          color white
-          border-color color_main
+      &:hover .icon
+        @extend .icon.share-icon:hover
       
   .user-image
     clickable()
