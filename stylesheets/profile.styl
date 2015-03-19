@@ -2,11 +2,57 @@
 
 .container.profile
   line-height 20px
-  box-sizing border-box    
+  box-sizing border-box  
   .content
-    background color_main
     height 530px    
-    padding-top 180px
+    background grey_bg
+    &.loggedout
+      padding-top 180px
+      background color_main
+    .username
+      color color_main
+      font-weight bold
+    .bio
+      font-size 0.8em
+      margin-bottom 10px
+    .list-item.profile
+      height 20px
+      margin 6px 0
+      border-radius 4px
+      border 1px solid grey_light
+      .icon 
+        float right
+      .number
+        color color_main
+        width 40px
+        text-align center
+        display inline-block
+        font-weight bold
+      &:hover
+        .number, .icon, .icon i
+          color white
+          border-color color_main
+      
+  .user-image
+    clickable()
+    width 100%
+    text-align center
+    background white
+    padding-top 18px
+    border-bottom 1px solid grey_light
+    &:hover
+      background color_main
+      h2
+        color white
+    h2
+      padding 20px 0
+      font-weight 100
+      color grey_med
+    img 
+      width 130px
+      height 130px
+      border 2px solid white
+      border-radius 65px
 
   h1 
     color white
@@ -32,8 +78,14 @@
       color color_main
       &:hover
         background darken(white, 2%)
-        
+
+  .register-form button.switch
+    margin-top 115px
+
   .form
+    display none
+    &.active
+      display block      
     input 
       display: block
       width: 100%
@@ -45,14 +97,13 @@
       text-align center
       width 100%
       display inline-block
-      
 
   .profile-footer
     text-align center
     width 100%
     box-sizing border-box
     padding 25px
-    border-top 1px solid color_light
+    border-top 1px solid grey_light
     background grey_bg
     a
       margin 0 6px

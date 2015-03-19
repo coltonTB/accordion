@@ -437,9 +437,73 @@ a {
   box-sizing: border-box;
 }
 .container.profile .content {
-  background: #f7c257;
   height: 530px;
+  background: #f9f9f9;
+}
+.container.profile .content.loggedout {
   padding-top: 180px;
+  background: #f7c257;
+}
+.container.profile .content .username {
+  color: #f7c257;
+  font-weight: bold;
+}
+.container.profile .content .bio {
+  font-size: 0.8em;
+  margin-bottom: 10px;
+}
+.container.profile .content .list-item.profile {
+  height: 20px;
+  margin: 6px 0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-transition: 4px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.container.profile .content .list-item.profile .icon {
+  float: right;
+}
+.container.profile .content .list-item.profile .number {
+  color: #f7c257;
+  width: 40px;
+  text-align: center;
+  display: inline-block;
+  font-weight: bold;
+}
+.container.profile .content .list-item.profile:hover .number,
+.container.profile .content .list-item.profile:hover .icon,
+.container.profile .content .list-item.profile:hover .icon i {
+  color: #fff;
+  border-color: #f7c257;
+}
+.container.profile .user-image {
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  background: #fff;
+  padding-top: 18px;
+  border-bottom: 1px solid #ccc;
+}
+.container.profile .user-image:hover {
+  background: #f7c257;
+}
+.container.profile .user-image:hover h2 {
+  color: #fff;
+}
+.container.profile .user-image h2 {
+  padding: 20px 0;
+  font-weight: 100;
+  color: #939393;
+}
+.container.profile .user-image img {
+  width: 130px;
+  height: 130px;
+  border: 2px solid #fff;
+  -webkit-border-radius: 65px;
+  -moz-border-radius: 65px;
+  -o-transition: 65px;
+  border-radius: 65px;
 }
 .container.profile h1 {
   color: #fff;
@@ -470,6 +534,15 @@ a {
 .container.profile button.switch:hover {
   background: #fafafa;
 }
+.container.profile .register-form button.switch {
+  margin-top: 115px;
+}
+.container.profile .form {
+  display: none;
+}
+.container.profile .form.active {
+  display: block;
+}
 .container.profile .form input {
   display: block;
   width: 100%;
@@ -491,7 +564,7 @@ a {
   -o-box-sizing: border-box;
   box-sizing: border-box;
   padding: 25px;
-  border-top: 1px solid color_light;
+  border-top: 1px solid #ccc;
   background: #f9f9f9;
 }
 .container.profile .profile-footer a {
@@ -540,7 +613,10 @@ iframe {
 }
 iframe.panel {
   width: 340px;
-  height: 900px;
+  height: 600px;
   margin-right: 30px;
   margin-top: 30px;
+}
+iframe.panel.main {
+  height: 900px;
 }
