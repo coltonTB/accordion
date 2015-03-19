@@ -1,24 +1,4 @@
-@import './functions'
-
-color_main          = #f7c257
-color_stroke        = #F29820
-color_logo          = #F4B858
-color_success_light = #56ef7a
-color_success_dark  = #58db52
-color_cover_light   = #5cb9ff
-color_cover_dark    = #1fa5ff
-color_alert_light   = #f08678
-color_alert_dark    = #ef7e7b
-grey_bg             = #F9F9F9
-grey_xlight         = #d1d1d1
-grey_light          = #cccccc
-grey_med            = #939393
-grey_dark           = #414141
-grey_circleline     = #e6e6e6
-
-tdur = 0.3s
-tabHeight = 45px
-contentHeight = 600px
+@import './vendor'
 
 button:focus
   outline none
@@ -26,6 +6,14 @@ button:focus
 a
   color orange
   text-decoration none
+  
+body
+  margin 0
+  iframe
+    border 1px solid #d0d0d0
+
+h1,h2,h3,h4,h5
+  margin 0
   
 clickable()
   cursor pointer
@@ -43,174 +31,3 @@ clickable()
     overflow-y scroll
     box-sizing border-box
     height contentHeight - tabHeight
-    
-.icon
-  border: 1px solid grey_circleline
-  width: 20px
-  height: 20px
-  border-radius 15px
-  background-size 85%
-  background-repeat no-repeat
-  background-position center
-  &:hover
-    border-color transparent
-  
-.icon.down-arrow
-  background-image url('http://storage.googleapis.com/honey-extension/images/assets/arrow_copy.png')
-  &:hover
-    background-image url('http://storage.googleapis.com/honey-extension/images/assets/arrow_copy_white.png')
-  
-.icon.right-arrow
-  transform rotate(-90deg)
-  background-image url('http://storage.googleapis.com/honey-extension/images/assets/arrow_copy.png')
-  &:hover
-    background-image url('http://storage.googleapis.com/honey-extension/images/assets/arrow_copy_white.png')
-  
-.icon.notifs-icon
-  background-image url('http://storage.googleapis.com/honey-extension/images/assets/bell.png')
-  &:hover
-    background-image url('http://storage.googleapis.com/honey-extension/images/assets/bell_highlighted.png')
-
-.icon.share-icon
-  background-image url('http://storage.googleapis.com/honey-extension/images/assets/arrow_link.png')
-  &:hover
-    background-image url('http://storage.googleapis.com/honey-extension/images/assets/arrow_link_white.png')
-
-.icon.close-icon
-  background-image url('http://storage.googleapis.com/honey-extension/images/assets/exe_yellow.png')
-  &:hover
-    background-image url('http://storage.googleapis.com/honey-extension/images/assets/exe_white_circle.png')
-
-.icon.check-icon
-  background-image url('http://storage.googleapis.com/honey-extension/images/assets/check.png')
-
-#notifs
-  position: absolute;
-  width: 305px;
-  padding: 20px 0px;
-  border: 1px solid gray;
-  background: white;
-  &:before  //triangle
-    content ''
-    position: absolute
-    top: -4px
-    left: 5px
-    width: 0px
-    height: 0px
-    border-left: 5px solid transparent
-    border-right: 5px solid transparent
-    border-bottom: 5px solid #2f2f2f
-
-// navigation
-.ext-navbar
-  background grey_bg
-  text-align center
-  padding 16px
-  .notifs-icon
-    clickable()
-    float left
-  .close-icon
-    clickable()
-    float right
-  .logo img
-    clickable()
-    height 25px
-  .icon
-    border none
-    &.selected
-      @extend .icon.notifs-icon:hover
-              
-// list item
-.list-item
-  clickable()
-  height 70px
-  padding 12px
-  background white
-  border-top 1px solid grey_light
-  border-bottom 1px solid grey_light
-  &:hover  
-    background color_main
-    color white
-    .icon
-      border-color transparent
-    
-.list-item.product
-  .image
-    float left
-    img 
-      height 100%
-      border 1px solid grey_light
-      border-radius 3px
-      padding 4px
-      margin 0 12px
-      box-sizing border-box
-      background white
-      box-shadow 0 0 5px #f0f0f0
-  .title p
-    margin 0
-    margin-top 12px
-    height 24px
-    overflow hidden
-  .price
-    font-size 0.8em
-    font-weight bolder
-    .icon.check-icon
-      display inline-block
-      border none
-      width 14px
-      height 14px
-      position relative
-      top 2px
-
-.list-item.sale, .list-item.coupon
-  margin-top 10px
-  border-radius 4px
-  border 1px solid grey_circleline
-  font-size 15px
-  height auto
-  &:hover
-    .code
-      color white
-      border-color color_main
-  .code
-    color color_main
-    margin-left 30px
-  .description, .expiration
-    margin-left 30px
-    color grey_dark
-    font-size 0.9em
-    padding-top 2px
-  .icon
-    float left
-    
-.list-item.sale:hover
-  .icon
-    @extend .icon.share-icon:hover    
-    
-.list-item.coupon:hover
-  .icon
-    @extend .icon.down-arrow:hover    
-
-
-// header for coupons and sales
-.header
-  color color_main
-  font-size 18pt
-  line-height 20px
-  margin-bottom 20px
-  .number
-    float right
-  
-// view-all button for coupons and sales
-.view-all
-  clickable()
-  text-align: center
-  background: color_main
-  border-radius 3px
-  padding: 10px
-  color white
-  border 1px solid color_stroke
-  margin 0 6px
-  &:hover
-    border-color color_main
-    

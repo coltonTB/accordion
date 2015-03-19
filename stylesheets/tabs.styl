@@ -1,0 +1,80 @@
+@import './vendor'
+
+.tabs
+  width 100%
+  height contentHeight //**** needs to be set explicitly
+  background white
+  padding-bottom 10px
+  .tab
+    position relative
+    z-index 100
+    overflow hidden
+    width 100%
+    height tabHeight
+    transition height, tdur, ease-out
+    border-top 1px solid grey_light
+    color grey_dark
+    &.active
+      height 100%
+      .tab-handle
+        opacity 0
+        height 45px
+      .tab-content
+        opacity 1
+    &:not(.active)
+      .tab-handle:hover
+        background color_main
+        .badge
+          border-color white
+          background-color white
+          color color_main
+        .title
+          color white
+        .icon
+          border-color color_main
+          @extend .icon.right-arrow:hover
+      &:last-child
+        height 55px
+        .tab-handle
+          height 55px
+    &:first-child
+      border-top none
+      
+  .tab-content
+    position relative
+    top -45px
+    z-index 0
+    height 100%
+  .tab-handle
+    clickable()
+    box-sizing border-box
+    height 45px
+    line-height 27px
+    padding 0px 24px
+    background white    
+    overflow hidden
+    position relative
+    z-index 99
+    opacity 1
+    transition opacity 0.2s 0s ease-in, height tdur 0s ease-out
+    .badge
+      display inline-block
+      width 25px
+      height 25px
+      border 1px solid
+      text-align center
+      border-radius 21px
+      font-weight bold
+      overflow hidden
+      margin-top 10px
+      img
+        width 100%
+    .title
+      position relative
+      bottom 8px
+      margin-left 10px
+    .icon
+      float right
+      margin-top 10px
+    
+      
