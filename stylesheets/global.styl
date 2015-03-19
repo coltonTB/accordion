@@ -1,9 +1,18 @@
-honey_orange = #FABA64
-color_xlight = #f3f3f3
-color_light  = #e3e3e3
-color_med    = #c3c3c3
-color_dark   = #a4a4a4
-
+color_main          = #f7c257
+color_stroke        = #F29820
+color_logo          = #F4B858
+color_success_light = #56ef7a
+color_success_dark  = #58db52
+color_cover_light   = #5cb9ff
+color_cover_dark    = #1fa5ff
+color_alert_light   = #f08678
+color_alert_dark    = #ef7e7b
+grey_bg             = #F9F9F9
+grey_xlight         = #d1d1d1
+grey_light          = #cccccc
+grey_med            = #939393
+grey_dark           = #414141
+grey_circleline     = #e6e6e6
 
 tdur = 0.3s
 tabHeight = 45px
@@ -11,6 +20,10 @@ contentHeight = 600px
 
 button:focus
   outline none
+  
+a
+  color orange
+  text-decoration none
   
 clickable()
   cursor pointer
@@ -30,7 +43,7 @@ clickable()
     height contentHeight - tabHeight
     
 .icon
-  border: 1px solid gray
+  border: 1px solid grey_circleline
   width: 20px
   height: 20px
   border-radius: 15px
@@ -40,11 +53,11 @@ clickable()
   box-sizing border-box
   line-height 21px
   i 
-    color gray
+    color grey_dark
 
 // navigation
 .ext-navbar
-  background #F7F7F7
+  background grey_bg
   text-align center
   padding 16px
   .notifs
@@ -60,13 +73,13 @@ clickable()
     font-size 10px
     width 20px
     height 20px
-    padding 4px 1px 0 0
+    padding 7px 1px 0 0
     box-sizing border-box
     border-radius 14px
     i.ss-icon 
-      color honey_orange
+      color color_main
     &:hover
-      background honey_orange
+      background color_main
       i.ss-icon
         color white
               
@@ -76,20 +89,23 @@ clickable()
   height 70px
   padding 12px
   background white
-  border-top 1px solid color_light
-  border-bottom 1px solid color_light
+  border-top 1px solid grey_light
+  border-bottom 1px solid grey_light
   &:hover  
-    background honey_orange
+    background color_main
     
 .list-item.product
   .image
     float left
     img 
       height 100%
-      border 1px solid color_light
+      border 1px solid grey_light
+      border-radius 3px
       padding 4px
       margin 0 12px
       box-sizing border-box
+      background white
+      box-shadow 0 0 5px #f0f0f0
   .title p
     margin 0
     margin-top 12px
@@ -104,26 +120,26 @@ clickable()
       width 0
       color white
       padding 4px 4px 1px 5px
-      background honey_orange
+      background color_main
       border-radius 11px
       position relative
 
 .list-item.deal
   margin-top 10px
-  border-radius 5px
-  border 1px solid color_dark
+  border-radius 4px
+  border 1px solid grey_circleline
   font-size 15px
   height auto
   &:hover
     .code, .icon, .icon i 
       color white
-      border-color honey_orange
+      border-color color_main
   .code
-    color orange
+    color color_main
     margin-left 30px
   .description, .expiration
     margin-left 30px
-    color gray
+    color grey_dark
     font-size 0.9em
     padding-top 2px
   .icon
@@ -131,7 +147,7 @@ clickable()
     
 // header for coupons and sales
 .header
-  color honey_orange
+  color color_main
   font-size 18pt
   line-height 20px
   margin-bottom 20px
@@ -142,12 +158,12 @@ clickable()
 .view-all
   clickable()
   text-align: center
-  background: honey_orange
+  background: color_main
   border-radius: 3px
   padding: 10px
   color white
-  border 1px solid gray
-  margin 0 10px
+  border 1px solid color_stroke
+  margin 0 6px
   &:hover
-    border-color orange
+    border-color color_main
     

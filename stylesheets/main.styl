@@ -1,26 +1,27 @@
 .instant-cash-zone
   text-align center
   padding-top 50px
+  background grey_bg
   .percentage
     width 105px
     margin-left auto
     margin-right auto
     color white
-    background #4B4B4B
+    background grey_dark
     height 105px
     border-radius 55px
     font-size 46px
     line-height 108px
   .ic-prompt
     font-weight: bold
-    font-size: 1.2em
+    font-size: 1.1em
     margin: 7px 0
   button.activate
     clickable()
     height: 50px
     width: 250px
-    background: rgb(250, 202, 114)
-    border: 1px solid orange
+    background: color_main
+    border: 1px solid color_stroke
     border-radius: 3px
     color: white
     font-size: 19px
@@ -30,22 +31,22 @@
       background-color honey_orange
   .expires
     font-size: 12px
-    margin: 12px 0
+    margin: 16px 0
     
 .tabs
   width: 100%
   height contentHeight //**** needs to be set explicitly
   background white
   padding-bottom 10px
-  
   .tab
     position relative
     z-index 100
     overflow hidden
     width 100%
-    border-top: 1px solid color_light
     height tabHeight
     transition height, tdur, ease-out
+    border-top: 1px solid grey_light
+    color grey_dark
     &.active
       height 100%
       .tab-handle
@@ -55,21 +56,26 @@
         opacity 1
     &:not(.active)
       .tab-handle:hover
-        background honey_orange
+        background color_main
         .badge
           border-color white
           background-color white
-          color honey_orange
+          color color_main
         .title
           color white
         .icon
-          border-color honey_orange
+          border-color color_main
           color white
           i
             color white
+      &:last-child
+        height 55px
+        .tab-handle
+          height 55px
+    &:first-child
+      border-top none
       
   .tab-content
-    background white
     position relative
     top -45px
     z-index 0

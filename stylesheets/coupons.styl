@@ -1,10 +1,10 @@
 .container.coupons
-  background color_xlight
+  background grey_bg
   line-height 20px
   
   .posted-by
     font-size 11pt
-    color gray
+    color grey_med
     display block
     margin-top 18px
     strong
@@ -19,11 +19,12 @@
     clickable()
     float right
     font-size: 12px
-    color: orange
+    color: color_main
+    padding-right 3px
     &:after
       content: '+'
-      background: #ffa500
-      color: #fff
+      background: color_main
+      color: white
       width: 10px
       height: 10px
       border-radius: 24px
@@ -33,7 +34,7 @@
       line-height: 12px
       display: inline-block
     &:hover
-      color gray
+      color color_stroke
       &:after
-        background gray
+        background color_stroke
       

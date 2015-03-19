@@ -22,6 +22,10 @@ h5 {
 button:focus {
   outline: none;
 }
+a {
+  color: #ffa500;
+  text-decoration: none;
+}
 .container {
   height: 100%;
   width: 340px;
@@ -38,7 +42,7 @@ button:focus {
   height: 555px;
 }
 .icon {
-  border: 1px solid #808080;
+  border: 1px solid #e6e6e6;
   width: 20px;
   height: 20px;
   border-radius: 15px;
@@ -49,10 +53,10 @@ button:focus {
   line-height: 21px;
 }
 .icon i {
-  color: #808080;
+  color: #414141;
 }
 .ext-navbar {
-  background: #f7f7f7;
+  background: #f9f9f9;
   text-align: center;
   padding: 16px;
 }
@@ -72,15 +76,15 @@ button:focus {
   font-size: 10px;
   width: 20px;
   height: 20px;
-  padding: 4px 1px 0 0;
+  padding: 7px 1px 0 0;
   box-sizing: border-box;
   border-radius: 14px;
 }
 .ext-navbar .nav-btn i.ss-icon {
-  color: #faba64;
+  color: #f7c257;
 }
 .ext-navbar .nav-btn:hover {
-  background: #faba64;
+  background: #f7c257;
 }
 .ext-navbar .nav-btn:hover i.ss-icon {
   color: #fff;
@@ -90,21 +94,24 @@ button:focus {
   height: 70px;
   padding: 12px;
   background: #fff;
-  border-top: 1px solid #e3e3e3;
-  border-bottom: 1px solid #e3e3e3;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
 }
 .list-item:hover {
-  background: #faba64;
+  background: #f7c257;
 }
 .list-item.product .image {
   float: left;
 }
 .list-item.product .image img {
   height: 100%;
-  border: 1px solid #e3e3e3;
+  border: 1px solid #ccc;
+  border-radius: 3px;
   padding: 4px;
   margin: 0 12px;
   box-sizing: border-box;
+  background: #fff;
+  box-shadow: 0 0 5px #f0f0f0;
 }
 .list-item.product .title p {
   margin: 0;
@@ -122,14 +129,14 @@ button:focus {
   width: 0;
   color: #fff;
   padding: 4px 4px 1px 5px;
-  background: #faba64;
+  background: #f7c257;
   border-radius: 11px;
   position: relative;
 }
 .list-item.deal {
   margin-top: 10px;
-  border-radius: 5px;
-  border: 1px solid #a4a4a4;
+  border-radius: 4px;
+  border: 1px solid #e6e6e6;
   font-size: 15px;
   height: auto;
 }
@@ -137,16 +144,16 @@ button:focus {
 .list-item.deal:hover .icon,
 .list-item.deal:hover .icon i {
   color: #fff;
-  border-color: #faba64;
+  border-color: #f7c257;
 }
 .list-item.deal .code {
-  color: #ffa500;
+  color: #f7c257;
   margin-left: 30px;
 }
 .list-item.deal .description,
 .list-item.deal .expiration {
   margin-left: 30px;
-  color: #808080;
+  color: #414141;
   font-size: 0.9em;
   padding-top: 2px;
 }
@@ -154,7 +161,7 @@ button:focus {
   float: left;
 }
 .header {
-  color: #faba64;
+  color: #f7c257;
   font-size: 18pt;
   line-height: 20px;
   margin-bottom: 20px;
@@ -165,26 +172,27 @@ button:focus {
 .view-all {
   cursor: pointer;
   text-align: center;
-  background: #faba64;
+  background: #f7c257;
   border-radius: 3px;
   padding: 10px;
   color: #fff;
-  border: 1px solid #808080;
-  margin: 0 10px;
+  border: 1px solid #f29820;
+  margin: 0 6px;
 }
 .view-all:hover {
-  border-color: #ffa500;
+  border-color: #f7c257;
 }
 .instant-cash-zone {
   text-align: center;
   padding-top: 50px;
+  background: #f9f9f9;
 }
 .instant-cash-zone .percentage {
   width: 105px;
   margin-left: auto;
   margin-right: auto;
   color: #fff;
-  background: #4b4b4b;
+  background: #414141;
   height: 105px;
   border-radius: 55px;
   font-size: 46px;
@@ -192,15 +200,15 @@ button:focus {
 }
 .instant-cash-zone .ic-prompt {
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1.1em;
   margin: 7px 0;
 }
 .instant-cash-zone button.activate {
   cursor: pointer;
   height: 50px;
   width: 250px;
-  background: #faca72;
-  border: 1px solid #ffa500;
+  background: #f7c257;
+  border: 1px solid #f29820;
   border-radius: 3px;
   color: #fff;
   font-size: 19px;
@@ -209,11 +217,11 @@ button:focus {
   border: 1px solid #fff;
 }
 .instant-cash-zone button.activate:hover {
-  background-color: #faba64;
+  background-color: honey_orange;
 }
 .instant-cash-zone .expires {
   font-size: 12px;
-  margin: 12px 0;
+  margin: 16px 0;
 }
 .tabs {
   width: 100%;
@@ -226,9 +234,10 @@ button:focus {
   z-index: 100;
   overflow: hidden;
   width: 100%;
-  border-top: 1px solid #e3e3e3;
   height: 45px;
   transition: height, 0.3s, ease-out;
+  border-top: 1px solid #ccc;
+  color: #414141;
 }
 .tabs .tab.active {
   height: 100%;
@@ -241,25 +250,33 @@ button:focus {
   opacity: 1;
 }
 .tabs .tab:not(.active) .tab-handle:hover {
-  background: #faba64;
+  background: #f7c257;
 }
 .tabs .tab:not(.active) .tab-handle:hover .badge {
   border-color: #fff;
   background-color: #fff;
-  color: #faba64;
+  color: #f7c257;
 }
 .tabs .tab:not(.active) .tab-handle:hover .title {
   color: #fff;
 }
 .tabs .tab:not(.active) .tab-handle:hover .icon {
-  border-color: #faba64;
+  border-color: #f7c257;
   color: #fff;
 }
 .tabs .tab:not(.active) .tab-handle:hover .icon i {
   color: #fff;
 }
+.tabs .tab:not(.active):last-child {
+  height: 55px;
+}
+.tabs .tab:not(.active):last-child .tab-handle {
+  height: 55px;
+}
+.tabs .tab:first-child {
+  border-top: none;
+}
 .tabs .tab-content {
-  background: #fff;
   position: relative;
   top: -45px;
   z-index: 0;
@@ -302,12 +319,12 @@ button:focus {
   margin-top: 10px;
 }
 .container.coupons {
-  background: #f3f3f3;
+  background: #f9f9f9;
   line-height: 20px;
 }
 .container.coupons .posted-by {
   font-size: 11pt;
-  color: #808080;
+  color: #939393;
   display: block;
   margin-top: 18px;
 }
@@ -322,11 +339,12 @@ button:focus {
   cursor: pointer;
   float: right;
   font-size: 12px;
-  color: #ffa500;
+  color: #f7c257;
+  padding-right: 3px;
 }
 .quest-coupon .details:after {
   content: '+';
-  background: #ffa500;
+  background: #f7c257;
   color: #fff;
   width: 10px;
   height: 10px;
@@ -338,27 +356,51 @@ button:focus {
   display: inline-block;
 }
 .quest-coupon .details:hover {
-  color: #808080;
+  color: #f29820;
 }
 .quest-coupon .details:hover:after {
-  background: #808080;
+  background: #f29820;
 }
 .container.sales {
-  background: #f3f3f3;
+  background: #f9f9f9;
   line-height: 20px;
 }
 .container.profile {
-  background: #f3f3f3;
   line-height: 20px;
   box-sizing: border-box;
 }
 .container.profile .content {
+  background: #f7c257;
   height: 530px;
   padding-top: 180px;
 }
-.container.profile a {
-  color: #ffa500;
-  text-decoration: none;
+.container.profile h1 {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.container.profile button {
+  cursor: pointer;
+  width: 100%;
+  height: 30px;
+  border: none;
+}
+.container.profile button.submit {
+  background: #5cb9ff;
+  border: 1px solid #1fa5ff;
+  color: #fff;
+}
+.container.profile button.submit:hover {
+  background: #6cc0ff;
+}
+.container.profile button.switch {
+  background: #fff;
+  border: 1px solid #f29820;
+  margin-top: 160px;
+}
+.container.profile button.switch:hover {
+  background: #e6e6e6;
 }
 .container.profile .form input {
   display: block;
@@ -366,18 +408,7 @@ button:focus {
   height: 30px;
   line-height: 30px;
   margin-bottom: 10px;
-}
-.container.profile .form button {
-  cursor: pointer;
-  width: 100%;
-  height: 30px;
-  background: #faba64;
-  border: none;
-  color: #fff;
-}
-.container.profile .form .or {
-  text-align: center;
-  padding: 15px 0;
+  padding-left: 10px;
 }
 .container.profile .form a {
   text-align: center;
@@ -389,7 +420,8 @@ button:focus {
   width: 100%;
   box-sizing: border-box;
   padding: 25px;
-  border-top: 1px solid #e3e3e3;
+  border-top: 1px solid color_light;
+  background: #f9f9f9;
 }
 .container.profile .profile-footer a {
   margin: 0 6px;
