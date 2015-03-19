@@ -55,6 +55,24 @@ a {
 .icon i {
   color: #414141;
 }
+#notifs {
+  position: absolute;
+  width: 305px;
+  padding: 20px 0px;
+  border: 1px solid #808080;
+  background: #fff;
+}
+#notifs:before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 5px;
+  width: 0px;
+  height: 0px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #2f2f2f;
+}
 .ext-navbar {
   background: #f9f9f9;
   text-align: center;
@@ -72,21 +90,18 @@ a {
   cursor: pointer;
   height: 25px;
 }
-.ext-navbar .nav-btn {
-  font-size: 10px;
-  width: 20px;
-  height: 20px;
-  padding: 7px 1px 0 0;
-  box-sizing: border-box;
-  border-radius: 14px;
+.ext-navbar .icon {
+  border: none;
 }
-.ext-navbar .nav-btn i.ss-icon {
+.ext-navbar .icon i.ss-icon {
   color: #f7c257;
 }
-.ext-navbar .nav-btn:hover {
+.ext-navbar .icon:hover,
+.ext-navbar .icon.selected {
   background: #f7c257;
 }
-.ext-navbar .nav-btn:hover i.ss-icon {
+.ext-navbar .icon:hover i.ss-icon,
+.ext-navbar .icon.selected i.ss-icon {
   color: #fff;
 }
 .list-item {
