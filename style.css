@@ -301,22 +301,22 @@ a {
 .tabs .tab.active .tab-content {
   opacity: 1;
 }
-.tabs .tab:not(.active) .tab-handlehover {
+.tabs .tab:not(.active) .tab-handle:hover {
   background: #f7c257;
 }
-.tabs .tab:not(.active) .tab-handlehover .badge {
+.tabs .tab:not(.active) .tab-handle:hover .badge {
   border-color: #fff;
   background-color: #fff;
   color: #f7c257;
 }
-.tabs .tab:not(.active) .tab-handlehover .title {
+.tabs .tab:not(.active) .tab-handle:hover .title {
   color: #fff;
 }
-.tabs .tab:not(.active) .tab-handlehover .icon {
+.tabs .tab:not(.active) .tab-handle:hover .icon {
   border-color: #f7c257;
   color: #fff;
 }
-.tabs .tab:not(.active) .tab-handlehover .icon i {
+.tabs .tab:not(.active) .tab-handle:hover .icon i {
   color: #fff;
 }
 .tabs .tab:not(.active):last-child {
@@ -437,10 +437,11 @@ a {
   box-sizing: border-box;
 }
 .container.profile .content {
-  height: 530px;
+  height: 320px;
   background: #f9f9f9;
 }
 .container.profile .content.loggedout {
+  height: 530px;
   padding-top: 180px;
   background: #f7c257;
 }
