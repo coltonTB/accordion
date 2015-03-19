@@ -1,3 +1,5 @@
+@import './functions'
+
 .instant-cash-zone
   text-align center
   padding-top 50px
@@ -13,28 +15,28 @@
     font-size 46px
     line-height 108px
   .ic-prompt
-    font-weight: bold
-    font-size: 1.1em
-    margin: 7px 0
+    font-weight bold
+    font-size 1.1em
+    margin 7px 0
   button.activate
     clickable()
-    height: 50px
-    width: 250px
-    background: color_main
-    border: 1px solid color_stroke
-    border-radius: 3px
-    color: white
-    font-size: 19px
+    height 50px
+    width 250px
+    background color_main
+    border 1px solid color_stroke
+    border-radius 3px
+    color white
+    font-size 19px
     &:active
       border 1px solid white
     &:hover
       background-color honey_orange
   .expires
-    font-size: 12px
-    margin: 16px 0
+    font-size 12px
+    margin 16px 0
     
 .tabs
-  width: 100%
+  width 100%
   height contentHeight //**** needs to be set explicitly
   background white
   padding-bottom 10px
@@ -45,7 +47,7 @@
     width 100%
     height tabHeight
     transition height, tdur, ease-out
-    border-top: 1px solid grey_light
+    border-top 1px solid grey_light
     color grey_dark
     &.active
       height 100%
@@ -55,7 +57,7 @@
       .tab-content
         opacity 1
     &:not(.active)
-      .tab-handle:hover
+      .tab-handlehover
         background color_main
         .badge
           border-color white
@@ -83,9 +85,9 @@
   .tab-handle
     clickable()
     box-sizing border-box
-    height: 45px
-    line-height: 27px
-    padding: 0px 24px
+    height 45px
+    line-height 27px
+    padding 0px 24px
     background white    
     overflow hidden
     position relative
@@ -93,13 +95,13 @@
     opacity 1
     transition opacity 0.2s 0s ease-in, height tdur 0s ease-out
     .badge
-      display: inline-block
-      width: 25px
-      height: 25px
-      border: 1px solid
-      text-align: center
-      border-radius: 21px
-      font-weight: bold
+      display inline-block
+      width 25px
+      height 25px
+      border 1px solid
+      text-align center
+      border-radius 21px
+      font-weight bold
       overflow hidden
       margin-top 10px
       img
@@ -109,7 +111,7 @@
       bottom 8px
       margin-left 10px
     .icon
-      float: right
+      float right
       margin-top 10px
     
       
