@@ -426,6 +426,36 @@ a {
 .container.profile .profile-footer a {
   margin: 0 6px;
 }
+.container.icavailable {
+  background: #f9f9f9;
+}
+.container.icavailable h1 {
+  color: #f7c257;
+  font-size: 17px;
+  text-align: center;
+  font-weight: lighter;
+  margin: 15px;
+}
+.container.icavailable .list-item.ic-store {
+  height: 25px;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  margin: 10px 0;
+  text-align: center;
+  color: #f7c257;
+}
+.container.icavailable .list-item.ic-store .icon {
+  float: right;
+}
+.container.icavailable .list-item.ic-store:hover {
+  color: #fff;
+}
+.container.icavailable .list-item.ic-store:hover .icon {
+  border-color: #f7c257;
+}
+.container.icavailable .list-item.ic-store:hover .icon i {
+  color: #fff;
+}
 .panels {
   padding: 50px;
 }
