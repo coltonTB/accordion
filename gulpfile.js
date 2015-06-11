@@ -10,27 +10,12 @@ gulp.task('stylus', function () {
   return gulp.src('./stylesheets/index.styl')
     .pipe(stylus())
     .pipe(rename('style.css'))
-    .pipe(gulp.dest('.'))
-});
-
-gulp.task('templates', function() {
-  gulp.src('./templates/*.hbs')
-    .pipe(handlebars())
-    .pipe(wrap('Handlebars.registerPartial(<%= processPartialName(file.relative) %>, Handlebars.template(<%= contents %>));', {}, {
-      imports: {
-        processPartialName: function(fileName) {
-          return JSON.stringify(fileName.split('.')[0]);
-        }
-      }
-    }))
-    .pipe(concat('templates.js'))
-    .pipe(gulp.dest('.'));
+    .pipe(gulp.dest('./build'))
 });
 
 gulp.task('watch', function(){
   gulp.watch('./stylesheets/*.styl', ['stylus']);
-  gulp.watch('./templates/*.hbs', ['templates']);
 });
 
 
-gulp.task('default', ['stylus', 'templates', 'watch']);
+gulp.task('default', ['stylus']);

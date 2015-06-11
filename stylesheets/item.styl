@@ -1,0 +1,36 @@
+
+.items
+  .item
+    clickable()
+    height itemHeight
+    padding 12px
+    background white
+    border-top 1px solid outline_one
+    &:hover  
+      background color_hover
+      color white
+      .icon
+        border-color transparent
+    &:last-child
+      border-bottom 1px solid outline_one
+    .image
+      float left
+      img 
+        height 100%
+        border 1px solid outline_two
+        border-radius 3px
+        padding 4px
+        margin 0 12px
+        box-sizing border-box
+        background white
+        box-shadow 0 0 5px #f0f0f0
+    .title
+      display block
+      margin 0
+      margin-top 12px
+      height 24px
+      overflow hidden
+    .subtitle
+      display block
+      font-size 0.8em
+      font-weight bolder

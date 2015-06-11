@@ -1,9 +1,7 @@
-@import './vendor'
-
 .tabs
   width 100%
-  height contentHeight //**** needs to be set explicitly
-  background white
+  height contentHeight
+  background color_bg
   padding-bottom 10px
   .tab
     position relative
@@ -12,7 +10,7 @@
     width 100%
     height tabHeight
     transition height, tdur, ease-out
-    border-top 1px solid grey_light
+    border-top 1px solid outline_one
     color grey_dark
     &.active
       height 100%
@@ -23,7 +21,7 @@
         opacity 1
     &:not(.active)
       .tab-handle:hover
-        background color_main
+        background color_hover
         .badge
           border-color white
           background-color white
@@ -33,22 +31,19 @@
         .icon
           border-color color_main
           @extend .icon.right-arrow:hover
-      &:last-child
-        height 55px
-        .tab-handle
-          height 55px
     &:first-child
       border-top none
       
   .tab-content
     position relative
-    top -45px
+    top -1 * tabHeight
     z-index 0
     height 100%
+    background color_bg
   .tab-handle
     clickable()
     box-sizing border-box
-    height 45px
+    height tabHeight
     line-height 27px
     padding 0px 24px
     background white    

@@ -1,8 +1,5 @@
-@import './vendor'
-
-// navigation
 .navbar
-  background grey_bg
+  background color_nav
   text-align center
   padding 16px
   .notifs-icon
@@ -16,14 +13,13 @@
     height 25px
   .icon
     border none
-    &.selected
-      @extend .icon.notifs-icon:hover
+
   #notifs
     position: absolute;
     width: 305px;
     padding: 20px 0px;
-    border: 1px solid gray;
-    background: white;
+    border: 1px solid outline_one;
+    background: color_bg;
     &:before  //triangle
       content ''
       position: absolute
