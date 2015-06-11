@@ -37,7 +37,7 @@ h5 {
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  height: 555px;
+  height: 355px;
 }
 .icon {
   border: 1px solid #e6e6e6;
@@ -76,7 +76,7 @@ h5 {
   background-image: url("http://storage.googleapis.com/honey-extension/images/assets/bell.png");
 }
 .icon.notifs-icon:hover,
-.ext-navbar .icon.selected {
+.navbar .icon.selected {
   background-image: url("http://storage.googleapis.com/honey-extension/images/assets/bell_highlighted.png");
 }
 .icon.share-icon {
@@ -99,7 +99,7 @@ h5 {
 }
 .tabs {
   width: 100%;
-  height: 600px;
+  height: 400px;
   background: #fff;
   padding-bottom: 10px;
 }
@@ -127,18 +127,18 @@ h5 {
   opacity: 1;
 }
 .tabs .tab:not(.active) .tab-handle:hover {
-  background: #f7c257;
+  background: #ccc;
 }
 .tabs .tab:not(.active) .tab-handle:hover .badge {
   border-color: #fff;
   background-color: #fff;
-  color: #f7c257;
+  color: #ccc;
 }
 .tabs .tab:not(.active) .tab-handle:hover .title {
   color: #fff;
 }
 .tabs .tab:not(.active) .tab-handle:hover .icon {
-  border-color: #f7c257;
+  border-color: #ccc;
 }
 .tabs .tab:not(.active):last-child {
   height: 55px;
@@ -209,7 +209,7 @@ h5 {
   border-bottom: 1px solid #ccc;
 }
 .list-item:hover {
-  background: #f7c257;
+  background: #ccc;
   color: #fff;
 }
 .list-item:hover .icon {
@@ -266,11 +266,11 @@ h5 {
 .list-item.sale:hover .code,
 .list-item.coupon:hover .code {
   color: #fff;
-  border-color: #f7c257;
+  border-color: #ccc;
 }
 .list-item.sale .code,
 .list-item.coupon .code {
-  color: #f7c257;
+  color: #ccc;
   margin-left: 30px;
 }
 .list-item.sale .description,
@@ -286,34 +286,34 @@ h5 {
 .list-item.coupon .icon {
   float: left;
 }
-.ext-navbar {
+.navbar {
   background: #f9f9f9;
   text-align: center;
   padding: 16px;
 }
-.ext-navbar .notifs-icon {
+.navbar .notifs-icon {
   cursor: pointer;
   float: left;
 }
-.ext-navbar .close-icon {
+.navbar .close-icon {
   cursor: pointer;
   float: right;
 }
-.ext-navbar .logo img {
+.navbar .logo img {
   cursor: pointer;
   height: 25px;
 }
-.ext-navbar .icon {
+.navbar .icon {
   border: none;
 }
-.ext-navbar #notifs {
+.navbar #notifs {
   position: absolute;
   width: 305px;
   padding: 20px 0px;
   border: 1px solid #808080;
   background: #fff;
 }
-.ext-navbar #notifs:before {
+.navbar #notifs:before {
   content: '';
   position: absolute;
   top: -5px;
@@ -338,10 +338,10 @@ h5 {
 .container.profile .content.loggedout {
   height: 530px;
   padding-top: 180px;
-  background: #f7c257;
+  background: #ccc;
 }
 .container.profile .content .username {
-  color: #f7c257;
+  color: #ccc;
   font-weight: bold;
 }
 .container.profile .content .bio {
@@ -361,7 +361,7 @@ h5 {
   float: right;
 }
 .container.profile .content .list-item.profile .number {
-  color: #f7c257;
+  color: #ccc;
   width: 40px;
   text-align: center;
   display: inline-block;
@@ -376,7 +376,7 @@ h5 {
   border-bottom: 1px solid #ccc;
 }
 .container.profile .user-image:hover {
-  background: #f7c257;
+  background: #ccc;
 }
 .container.profile .user-image:hover h2 {
   color: #fff;
@@ -419,7 +419,7 @@ h5 {
   background: #fff;
   border: 1px solid #f29820;
   margin-top: 160px;
-  color: #f7c257;
+  color: #ccc;
 }
 .container.profile button.switch:hover {
   background: #fafafa;
@@ -488,7 +488,7 @@ h5 {
   cursor: pointer;
   height: 50px;
   width: 250px;
-  background: #f7c257;
+  background: #ccc;
   border: 1px solid #f29820;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -528,12 +528,12 @@ h5 {
   cursor: pointer;
   float: right;
   font-size: 12px;
-  color: #f7c257;
+  color: #ccc;
   padding-right: 3px;
 }
 .container.coupons .quest-coupon .details:after {
   content: '+';
-  background: #f7c257;
+  background: #ccc;
   color: #fff;
   width: 10px;
   height: 10px;
@@ -558,7 +558,7 @@ h5 {
   line-height: 20px;
 }
 .header {
-  color: #f7c257;
+  color: #ccc;
   font-size: 18pt;
   line-height: 20px;
   margin-bottom: 20px;
@@ -569,7 +569,7 @@ h5 {
 .view-all {
   cursor: pointer;
   text-align: center;
-  background: #f7c257;
+  background: #ccc;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -o-transition: 3px;
@@ -580,13 +580,13 @@ h5 {
   margin: 0 6px;
 }
 .view-all:hover {
-  border-color: #f7c257;
+  border-color: #ccc;
 }
 .container.icavailable {
   background: #f9f9f9;
 }
 .container.icavailable h1 {
-  color: #f7c257;
+  color: #ccc;
   font-size: 17px;
   text-align: center;
   font-weight: lighter;
@@ -601,7 +601,7 @@ h5 {
   border-radius: 5px;
   margin: 10px 0;
   text-align: center;
-  color: #f7c257;
+  color: #ccc;
 }
 .container.icavailable .list-item.ic-store .icon {
   float: right;
