@@ -1,77 +1,79 @@
-.tabs
-  width 100%
-  height contentHeight
-  background color_bg
-  padding-bottom 10px
-  .tab
-    position relative
-    z-index 100
-    overflow hidden
+.ctb-accordion
+  .tabs
     width 100%
-    height tabHeight
-    transition height, tdur, ease-out
-    border-top 1px solid outline_one
-    color grey_dark
-    &.active
-      height 100%
-      .tab-handle
-        opacity 0
-        height 45px
-      .tab-content
-        opacity 1
-    &:not(.active)
-      .tab-handle:hover
-        background color_hover
-        .badge
-          border-color white
-          background-color white
-          color color_main
-        .title
-          color white
-        .icon
-          border-color color_main
-          @extend .icon.right-arrow:hover
-    &:first-child
-      border-top none
-      
-  .tab-content
-    position relative
-    top -1 * tabHeight
-    z-index 0
-    height 100%
+    height contentHeight
     background color_bg
-    // transition opacity tdur 0s
-    // opacity 0
-  .tab-handle
-    clickable()
-    box-sizing border-box
-    height tabHeight
-    line-height 27px
-    padding 0px 24px
-    background white    
-    overflow hidden
-    position relative
-    z-index 99
-    opacity 1
-    transition opacity tdur 0s ease-in, height tdur 0s ease-out
-    .badge
-      display inline-block
-      width 25px
-      height 25px
-      border 1px solid
-      text-align center
-      border-radius 21px
-      font-weight bold
-      overflow hidden
-      margin-top 10px
-      img
-        width 100%
-    .title
+    padding-bottom 10px
+    .tab
       position relative
-      bottom 8px
-      margin-left 10px
-    .icon
-      float right
-      margin-top 10px
+      z-index 100
+      overflow hidden
+      width 100%
+      height tabHeight
+      transition height, tdur, ease-out
+      border-top 1px solid outline_one
+      color grey_dark
+      &.active
+        height 100%
+        .tab-handle
+          opacity 0
+          height 45px
+        .tab-content
+          opacity 1
+      &:not(.active)
+        .tab-handle
+          clickable()
+        .tab-handle:hover
+          background color_hover
+          .badge
+            border-color white
+            background-color white
+            color color_main
+          .title
+            color white
+          .icon
+            border-color color_main
+            @extend .ctb-accordion .icon.right-arrow:hover
+      &:first-child
+        border-top none
+        
+    .tab-content
+      position relative
+      top -1 * tabHeight
+      z-index 0
+      height 100%
+      background color_bg
+      // transition opacity tdur 0s
+      // opacity 0
+    .tab-handle
+      box-sizing border-box
+      height tabHeight
+      line-height 27px
+      padding 0px 24px
+      background white    
+      overflow hidden
+      position relative
+      z-index 99
+      opacity 1
+      transition opacity tdur 0s ease-in, height tdur 0s ease-out
+      .badge
+        display inline-block
+        width 25px
+        height 25px
+        border 1px solid
+        text-align center
+        border-radius 21px
+        font-weight bold
+        overflow hidden
+        margin-top 10px
+        img
+          width 100%
+      .title
+        position relative
+        bottom 8px
+        margin-left 10px
+      .icon
+        float right
+        margin-top 10px
     
       

@@ -1,4 +1,4 @@
-.container {
+.ctb-accordion.container {
   height: 790px;
   width: 340px;
   font-family: 'avenir';
@@ -9,12 +9,13 @@
   box-sizing: border-box;
   margin: 50px;
   box-shadow: 0 0 24px 1px #ddd;
+  padding: 0;
 }
 .tab-content {
   padding-top: 50px;
   text-align: center;
 }
-.icon {
+.ctb-accordion .icon {
   border: 1px solid #bbb;
   width: 20px;
   height: 20px;
@@ -26,36 +27,36 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-.icon.down-arrow {
+.ctb-accordion .icon.down-arrow {
   background-image: url("../img/arrow_copy.png");
 }
-.icon.down-arrow:hover {
+.ctb-accordion .icon.down-arrow:hover {
   background-image: url("../img/arrow_copy_white.png");
 }
-.icon.right-arrow {
+.ctb-accordion .icon.right-arrow {
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
   -o-transform: rotate(-90deg);
   transform: rotate(-90deg);
   background-image: url("../img/arrow_copy.png");
 }
-.icon.right-arrow:hover,
-.tabs .tab:not(.active) .tab-handle:hover .icon {
+.ctb-accordion .icon.right-arrow:hover,
+.ctb-accordion .tabs .tab:not(.active) .tab-handle:hover .icon {
   background-image: url("../img/arrow_copy_white.png");
 }
-.icon.share-icon {
+.ctb-accordion .icon.share-icon {
   background-image: url("../img/arrow_link.png");
 }
-.icon.share-icon:hover {
+.ctb-accordion .icon.share-icon:hover {
   background-image: url("../img/arrow_link_white.png");
 }
-.tabs {
+.ctb-accordion .tabs {
   width: 100%;
   height: 500px;
   background: #eee;
   padding-bottom: 10px;
 }
-.tabs .tab {
+.ctb-accordion .tabs .tab {
   position: relative;
   z-index: 100;
   overflow: hidden;
@@ -68,42 +69,44 @@
   border-top: 1px solid #999;
   color: grey_dark;
 }
-.tabs .tab.active {
+.ctb-accordion .tabs .tab.active {
   height: 100%;
 }
-.tabs .tab.active .tab-handle {
+.ctb-accordion .tabs .tab.active .tab-handle {
   opacity: 0;
   height: 45px;
 }
-.tabs .tab.active .tab-content {
+.ctb-accordion .tabs .tab.active .tab-content {
   opacity: 1;
 }
-.tabs .tab:not(.active) .tab-handle:hover {
+.ctb-accordion .tabs .tab:not(.active) .tab-handle {
+  cursor: pointer;
+}
+.ctb-accordion .tabs .tab:not(.active) .tab-handle:hover {
   background: #0074d9;
 }
-.tabs .tab:not(.active) .tab-handle:hover .badge {
+.ctb-accordion .tabs .tab:not(.active) .tab-handle:hover .badge {
   border-color: #fff;
   background-color: #fff;
   color: color_main;
 }
-.tabs .tab:not(.active) .tab-handle:hover .title {
+.ctb-accordion .tabs .tab:not(.active) .tab-handle:hover .title {
   color: #fff;
 }
-.tabs .tab:not(.active) .tab-handle:hover .icon {
+.ctb-accordion .tabs .tab:not(.active) .tab-handle:hover .icon {
   border-color: color_main;
 }
-.tabs .tab:first-child {
+.ctb-accordion .tabs .tab:first-child {
   border-top: none;
 }
-.tabs .tab-content {
+.ctb-accordion .tabs .tab-content {
   position: relative;
   top: -45px;
   z-index: 0;
   height: 100%;
   background: #eee;
 }
-.tabs .tab-handle {
-  cursor: pointer;
+.ctb-accordion .tabs .tab-handle {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;
@@ -121,7 +124,7 @@
   -o-transition: opacity 0.3s 0s ease-in, height 0.3s 0s ease-out;
   transition: opacity 0.3s 0s ease-in, height 0.3s 0s ease-out;
 }
-.tabs .tab-handle .badge {
+.ctb-accordion .tabs .tab-handle .badge {
   display: inline-block;
   width: 25px;
   height: 25px;
@@ -135,39 +138,40 @@
   overflow: hidden;
   margin-top: 10px;
 }
-.tabs .tab-handle .badge img {
+.ctb-accordion .tabs .tab-handle .badge img {
   width: 100%;
 }
-.tabs .tab-handle .title {
+.ctb-accordion .tabs .tab-handle .title {
   position: relative;
   bottom: 8px;
   margin-left: 10px;
 }
-.tabs .tab-handle .icon {
+.ctb-accordion .tabs .tab-handle .icon {
   float: right;
   margin-top: 10px;
 }
-.items .item {
+.ctb-accordion .items .item {
   cursor: pointer;
   height: 70px;
   padding: 12px;
   background: #fff;
   border-top: 1px solid #999;
 }
-.items .item:hover {
+.ctb-accordion .items .item:hover {
   background: #0074d9;
   color: #fff;
 }
-.items .item:hover .icon {
+.ctb-accordion .items .item:hover .icon {
   border-color: transparent;
 }
-.items .item:last-child {
+.ctb-accordion .items .item:last-child {
   border-bottom: 1px solid #999;
 }
-.items .item .image {
+.ctb-accordion .items .item .image {
   float: left;
+  height: 70px;
 }
-.items .item .image img {
+.ctb-accordion .items .item .image img {
   height: 100%;
   border: 1px solid #bbb;
   -webkit-border-radius: 3px;
@@ -183,46 +187,46 @@
   background: #fff;
   box-shadow: 0 0 5px #f0f0f0;
 }
-.items .item .title {
+.ctb-accordion .items .item .title {
   display: block;
   margin: 0;
   margin-top: 12px;
   height: 24px;
   overflow: hidden;
 }
-.items .item .subtitle {
+.ctb-accordion .items .item .subtitle {
   display: block;
   font-size: 0.8em;
   font-weight: bolder;
 }
-.navbar {
+.ctb-accordion .navbar {
   background: #fff;
   text-align: center;
   padding: 16px;
 }
-.navbar .notifs-icon {
+.ctb-accordion .navbar .notifs-icon {
   cursor: pointer;
   float: left;
 }
-.navbar .close-icon {
+.ctb-accordion .navbar .close-icon {
   cursor: pointer;
   float: right;
 }
-.navbar .logo img {
+.ctb-accordion .navbar .logo img {
   cursor: pointer;
   height: 25px;
 }
-.navbar .icon {
+.ctb-accordion .navbar .icon {
   border: none;
 }
-.navbar #notifs {
+.ctb-accordion .navbar #notifs {
   position: absolute;
   width: 305px;
   padding: 20px 0px;
   border: 1px solid #999;
   background: #eee;
 }
-.navbar #notifs:before {
+.ctb-accordion .navbar #notifs:before {
   content: '';
   position: absolute;
   top: -5px;

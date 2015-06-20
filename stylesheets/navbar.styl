@@ -1,32 +1,33 @@
-.navbar
-  background color_nav
-  text-align center
-  padding 16px
-  .notifs-icon
-    clickable()
-    float left
-  .close-icon
-    clickable()
-    float right
-  .logo img
-    clickable()
-    height 25px
-  .icon
-    border none
+.ctb-accordion
+  .navbar
+    background color_nav
+    text-align center
+    padding 16px
+    .notifs-icon
+      clickable()
+      float left
+    .close-icon
+      clickable()
+      float right
+    .logo img
+      clickable()
+      height 25px
+    .icon
+      border none
 
-  #notifs
-    position: absolute;
-    width: 305px;
-    padding: 20px 0px;
-    border: 1px solid outline_one;
-    background: color_bg;
-    &:before  //triangle
-      content ''
-      position: absolute
-      top: -5px
-      left: 5px
-      width: 0px
-      height: 0px
-      border-left: 5px solid transparent
-      border-right: 5px solid transparent
-      border-bottom: 5px solid #2f2f2f
+    #notifs
+      position: absolute;
+      width: 305px;
+      padding: 20px 0px;
+      border: 1px solid outline_one;
+      background: color_bg;
+      &:before  //triangle
+        content ''
+        position: absolute
+        top: -5px
+        left: 5px
+        width: 0px
+        height: 0px
+        border-left: 5px solid transparent
+        border-right: 5px solid transparent
+        border-bottom: 5px solid #2f2f2f
