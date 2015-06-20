@@ -59,14 +59,19 @@ project_name: accordion
   </div>
 
   <script type="text/javascript" src="{{page.personal_site_url}}/prism/prism.js"></script>
-  <script type="text/javascript" src="./assets/jquery-2.1.4.js"></script>
   <script type="text/javascript">
-    
-    $(function(){
-      $('.tabs .tab').on('click', function(e){
-        $('.tab').removeClass('active');
-        $(e.target).closest('.tab').addClass('active');
-      });
+    var tabs = [];
+    Array.prototype.forEach.call(
+      document.querySelectorAll('.ctb-accordion .tabs .tab'),
+      function(t){tabs.push(t);}
+    );
+    tabs.forEach(function(tab){
+      tab.addEventListener('click', function(e) {
+        tabs.forEach(function(t){
+          t.classList.remove('active');
+        });
+        tab.classList.add('active');
+      }, false);
     });
   </script>
 
