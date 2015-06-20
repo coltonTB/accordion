@@ -14,12 +14,12 @@ project_name: accordion
   <link rel="stylesheet" type="text/css" href="{{page.personal_site_url}}/prism/prism.css">
   <style type="text/css">
     .ctb-accordion{
-      height: 790px;
+      height: 797px;
       width: 340px;
       font-family: 'avenir';
-      position: absolute;
+      float: left;
       box-sizing: border-box;
-      margin: 30px 0;
+      margin: 30px 30px 0 0;
       box-shadow: 0 0 24px 1px #ddd;
       padding: 0;
     }
@@ -59,6 +59,16 @@ project_name: accordion
   </div>
 
   <script type="text/javascript" src="{{page.personal_site_url}}/prism/prism.js"></script>
+  <script type="text/javascript" src="./assets/jquery-2.1.4.js"></script>
+  <script type="text/javascript">
+    
+    $(function(){
+      $('.tabs .tab').on('click', function(e){
+        $('.tab').removeClass('active');
+        $(e.target).closest('.tab').addClass('active');
+      });
+    });
+  </script>
 
 </body>
 </html>
