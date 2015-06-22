@@ -1,5 +1,5 @@
 ---
-personal_site_url: http://coltontbrown.com
+personal_site_url: http://localhost:8080
 project_name: accordion
 ---
 
@@ -19,9 +19,10 @@ project_name: accordion
       font-family: 'avenir';
       float: left;
       box-sizing: border-box;
-      margin: 30px 30px 0 0;
+      margin: 30px 45px 0 0;
       box-shadow: 0 0 24px 1px #ddd;
       padding: 0;
+      margin-bottom: 100px;
     }
     .tab-content{
       padding-top: 50px;
@@ -29,6 +30,7 @@ project_name: accordion
     }
     .container{
       min-height: 950px;
+      max-width: 900px;
     }
   </style>
 </head>
@@ -47,6 +49,8 @@ project_name: accordion
     </div>
 
     <div class="project-pg-nav">
+      <a href="./">readme</a>
+      <a href="./docs.html">docs</a>
       <a href="http://github.com/coltonTB/{{page.project_name}}">view on github</a>
     </div>
 
@@ -60,16 +64,11 @@ project_name: accordion
 
   <script type="text/javascript" src="{{page.personal_site_url}}/prism/prism.js"></script>
   <script type="text/javascript">
-    var tabs = [];
-    Array.prototype.forEach.call(
-      document.querySelectorAll('.ctb-accordion .tabs .tab'),
-      function(t){tabs.push(t);}
-    );
+    var sel = document.querySelectorAll('.ctb-accordion .tab'),
+    tabs = [].map.call(sel, function(t){return t});
     tabs.forEach(function(tab){
-      tab.addEventListener('click', function(e) {
-        tabs.forEach(function(t){
-          t.classList.remove('active');
-        });
+      tab.addEventListener('click', function() {
+        tabs.forEach(function(t){t.classList.remove('active');});
         tab.classList.add('active');
       }, false);
     });
